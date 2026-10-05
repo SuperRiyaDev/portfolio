@@ -23,16 +23,6 @@ export function Contact({ site }: Props) {
           Email me
         </a>
         <ul className="flex flex-wrap items-center gap-4">
-          {site.phone && (
-            <li>
-              <a
-                href={`tel:${site.phone.replace(/\s/g, "")}`}
-                className="text-sm font-medium text-accent-code underline-offset-4 hover:underline"
-              >
-                {site.phone}
-              </a>
-            </li>
-          )}
           {site.socials.map((s) => (
             <li key={s.label}>
               <a
