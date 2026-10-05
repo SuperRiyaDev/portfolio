@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Multi-lender quoting project cover">
+  <rect width="640" height="400" fill="#111318"/>
+  <rect x="80" y="40" width="480" height="320" rx="14" fill="#1a1f28" stroke="#243044"/>
+  <rect x="80" y="40" width="480" height="28" fill="#243044"/>
+  <circle cx="104" cy="54" r="5" fill="#818cf8"/>
+  <circle cx="124" cy="54" r="5" fill="#34d399"/>
+  <circle cx="144" cy="54" r="5" fill="#38bdf8"/>
+  <rect x="112" y="100" width="416" height="48" rx="6" fill="#141a22" stroke="#34d399" stroke-opacity="0.4"/>
+  <rect x="112" y="168" width="200" height="120" rx="6" fill="#141a22"/>
+  <rect x="328" y="168" width="200" height="120" rx="6" fill="#141a22"/>
+  <text x="320" y="372" text-anchor="middle" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="14">Electron · GCP · RLS</text>
+</svg>
