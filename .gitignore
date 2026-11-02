@@ -4,9 +4,6 @@ Thumbs.db
 .env*
 _site/
 
-# large demo video: compress before committing
-assets/projects/weather-news-demo.mp4
-
 # resume files contain a phone number; shared via Drive link instead
 resume/
 assets/resume.pdf

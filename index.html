@@ -148,14 +148,21 @@
             </article>
 
             <article class="card">
-              <img
+              <video
                 class="shot"
-                src="assets/projects/weather-news.svg"
-                alt="Illustration of a radar map with address and date search"
-                width="640"
-                height="400"
-                loading="lazy"
-              />
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="assets/projects/weather-news.svg"
+                aria-label="Weather news demo"
+              >
+                <source
+                  src="assets/projects/weather-news-demo.mp4"
+                  type="video/mp4"
+                />
+              </video>
               <div class="body">
                 <h3><a href="projects/weather-news.html">Weather news</a></h3>
                 <p>
