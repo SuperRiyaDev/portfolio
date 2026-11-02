@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather news — Supriya Dutta</title>
+    <meta
+      name="description"
+      content="Case study: a public weather-news feature with NEXRAD radar and date or address search."
+    />
+    <meta name="theme-color" content="#0d1117" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="page case">
+      <nav class="nav" aria-label="Site">
+        <a class="home" href="../">supriya dutta</a>
+        <a href="../#projects">projects</a>
+        <a href="../#contact">contact</a>
+      </nav>
+
+      <p class="crumb"><a href="../#projects">← projects</a></p>
+      <h1>Weather news</h1>
+      <p class="headline">
+        A public page where anyone can look up radar and weather events for a
+        date and an address.
+      </p>
+
+      <dl class="facts">
+        <div><dt>role</dt><dd>Built</dd></div>
+        <div><dt>company</dt><dd>Granular.ai</dd></div>
+        <div>
+          <dt>stack</dt>
+          <dd>React, Leaflet, Mapbox, Turf.js, NEXRAD radar</dd>
+        </div>
+        <div>
+          <dt>link</dt>
+          <dd>
+            <a href="https://inspect.properties/weather-news">live ↗</a>
+          </dd>
+        </div>
+      </dl>
+
+      <figure>
+        <img
+          src="../assets/projects/weather-news.svg"
+          alt="Illustration of a radar map with address and date search"
+          width="640"
+          height="400"
+        />
+        <figcaption>
+          Try it live:
+          <a href="https://inspect.properties/weather-news">inspect.properties/weather-news</a>
+        </figcaption>
+      </figure>
+
+      <h2>problem</h2>
+      <p>
+        Property and roofing questions often start with “what happened here, and
+        when?” Answering that usually means digging through separate weather
+        sources.
+      </p>
+
+      <h2>approach</h2>
+      <ul>
+        <li>NEXRAD radar layers shown on an interactive map.</li>
+        <li>Search by date and by address to jump to the right place and day.</li>
+        <li>
+          Built on the same mapping stack as the
+          <a href="geospatial-measurement.html">measurement tool</a>: Leaflet,
+          Mapbox, and Turf.js.
+        </li>
+      </ul>
+
+      <h2>result</h2>
+      <p>
+        Shipped as a public, live feature on the product site. I do not have
+        usage numbers to quote.
+      </p>
+
+      <p class="pager">
+        <a href="geospatial-measurement.html">← Geospatial measurement</a>
+        <a href="multi-lender.html">next: Multi-lender quoting →</a>
+      </p>
+      <footer><p>Static HTML and CSS.</p></footer>
+    </div>
+  </body>
+</html>

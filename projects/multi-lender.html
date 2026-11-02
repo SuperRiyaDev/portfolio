@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Multi-lender quoting — Supriya Dutta</title>
+    <meta
+      name="description"
+      content="Case study: an Electron app on Cloud Run and PostgreSQL with row-level security and OAuth PKCE."
+    />
+    <meta name="theme-color" content="#0d1117" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="page case">
+      <nav class="nav" aria-label="Site">
+        <a class="home" href="../">supriya dutta</a>
+        <a href="../#projects">projects</a>
+        <a href="../#contact">contact</a>
+      </nav>
+
+      <p class="crumb"><a href="../#projects">← projects</a></p>
+      <h1>Multi-lender quoting</h1>
+      <p class="headline">
+        A desktop quoting app where tenant isolation lives in the database, not
+        just in application code.
+      </p>
+
+      <dl class="facts">
+        <div><dt>type</dt><dd>Interview take-home project</dd></div>
+        <div>
+          <dt>stack</dt>
+          <dd>Electron, Cloud Run, Cloud SQL (PostgreSQL)</dd>
+        </div>
+        <div><dt>auth</dt><dd>IAM-based OAuth (PKCE)</dd></div>
+        <div>
+          <dt>code</dt>
+          <dd>
+            <a href="https://github.com/SuperRiyaDev/Quoting-tool">GitHub ↗</a>
+          </dd>
+        </div>
+      </dl>
+
+      <figure>
+        <img
+          src="../assets/projects/multi-lender.svg"
+          alt="Illustration of a desktop quoting application"
+          width="640"
+          height="400"
+        />
+      </figure>
+
+      <h2>problem</h2>
+      <p>
+        Several lenders use one quoting product. A bug in application code must
+        not be able to show one lender’s data to another.
+      </p>
+
+      <h2>approach</h2>
+      <ul>
+        <li>
+          PostgreSQL row-level security policies enforce tenant isolation at the
+          database level.
+        </li>
+        <li>
+          The API runs on Cloud Run with Cloud SQL; authentication is IAM-based
+          OAuth with PKCE.
+        </li>
+        <li>
+          Secret Manager holds credentials, so no cloud secrets ship inside the
+          desktop client.
+        </li>
+      </ul>
+
+      <h2>result</h2>
+      <p>
+        A working desktop app and API with isolation and secrets handled by
+        design. This was a time-boxed take-home, so it has no production
+        traffic or metrics to report.
+      </p>
+
+      <p class="pager">
+        <a href="weather-news.html">← Weather news</a>
+        <a href="../#projects">all projects →</a>
+      </p>
+      <footer><p>Static HTML and CSS.</p></footer>
+    </div>
+  </body>
+</html>

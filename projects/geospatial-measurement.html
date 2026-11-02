@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Geospatial measurement — Supriya Dutta</title>
+    <meta
+      name="description"
+      content="Case study: a polygon-editing measurement tool on satellite imagery whose area output feeds estimates."
+    />
+    <meta name="theme-color" content="#0d1117" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="page case">
+      <nav class="nav" aria-label="Site">
+        <a class="home" href="../">supriya dutta</a>
+        <a href="../#projects">projects</a>
+        <a href="../#contact">contact</a>
+      </nav>
+
+      <p class="crumb"><a href="../#projects">← projects</a></p>
+      <h1>Geospatial measurement</h1>
+      <p class="headline">
+        Draw a roof on a satellite image and get quantities that flow straight
+        into an estimate.
+      </p>
+
+      <dl class="facts">
+        <div><dt>role</dt><dd>Built</dd></div>
+        <div><dt>company</dt><dd>Granular.ai</dd></div>
+        <div><dt>stack</dt><dd>Leaflet, Mapbox, Turf.js, React</dd></div>
+        <div>
+          <dt>link</dt>
+          <dd>
+            <a href="https://inspect.properties/#property-record">tool ↗</a>
+          </dd>
+        </div>
+      </dl>
+
+      <figure>
+        <img
+          src="../assets/projects/measurement-tool.jpg"
+          alt="Satellite map with a roof measurement polygon"
+          width="1400"
+          height="670"
+        />
+        <figcaption>A roof polygon drawn on satellite imagery.</figcaption>
+      </figure>
+
+      <h2>problem</h2>
+      <p>
+        Estimates start from measurements. Measuring by hand or in a separate
+        tool means retyping numbers, and retyped numbers go wrong.
+      </p>
+
+      <h2>approach</h2>
+      <ul>
+        <li>
+          Interactive polygon editing on satellite imagery with Leaflet and
+          Mapbox.
+        </li>
+        <li>
+          Coordinate transformations and area calculations with Turf.js, so
+          the area math is accurate rather than pixel-based.
+        </li>
+        <li>
+          The measured output feeds roof quantities directly into the estimate
+          workflow, with no manual copy step.
+        </li>
+      </ul>
+
+      <h2>result</h2>
+      <p>
+        One tool replaces a manual measuring step and powers the quantity
+        engine behind <a href="estimate-v6.html">Estimate V6</a>. It is live
+        in production.
+      </p>
+
+      <p class="pager">
+        <a href="estimate-v6.html">← Estimate V6</a>
+        <a href="weather-news.html">next: Weather news →</a>
+      </p>
+      <footer><p>Static HTML and CSS.</p></footer>
+    </div>
+  </body>
+</html>

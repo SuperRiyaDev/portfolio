@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Estimate V6 — Supriya Dutta</title>
+    <meta
+      name="description"
+      content="Case study: a revision-based quoting platform with immutable signed snapshots and a formula-driven quantity engine."
+    />
+    <meta name="theme-color" content="#0d1117" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="page case">
+      <nav class="nav" aria-label="Site">
+        <a class="home" href="../">supriya dutta</a>
+        <a href="../#projects">projects</a>
+        <a href="../#contact">contact</a>
+      </nav>
+
+      <p class="crumb"><a href="../#projects">← projects</a></p>
+      <h1>Estimate V6</h1>
+      <p class="headline">
+        The core quoting product at Granular.ai: every edit is a revision, and a
+        signed revision never changes.
+      </p>
+
+      <dl class="facts">
+        <div><dt>role</dt><dd>Architected and built</dd></div>
+        <div><dt>company</dt><dd>Granular.ai</dd></div>
+        <div>
+          <dt>stack</dt>
+          <dd>TypeScript, React, Node.js, MongoDB, tRPC</dd>
+        </div>
+        <div>
+          <dt>scale</dt>
+          <dd>108 modules · 91 components · 54 tests</dd>
+        </div>
+      </dl>
+
+      <figure>
+        <img
+          src="../assets/projects/estimate-v6-calculator.png"
+          alt="Quantity-rule editor with a formula and calculator keys for roof measurements"
+          width="1283"
+          height="908"
+        />
+        <figcaption>
+          Quantity rules: roof measurements go in, material counts come out.
+        </figcaption>
+      </figure>
+
+      <h2>problem</h2>
+      <p>
+        Roofing quotes change after inspection, after vendor price updates, and
+        after a homeowner asks for a different scope. Once a homeowner signs, the
+        numbers have to stay exactly as signed, which matters for insurance and
+        contractor workflows.
+      </p>
+
+      <h2>approach</h2>
+      <ul>
+        <li>
+          Each job can hold several estimates. Every edit creates a numbered
+          revision with builder, presentation, pricing, and audit snapshots.
+        </li>
+        <li>
+          Signing makes a revision immutable. Pricing is captured with a hash so
+          totals cannot drift after approval.
+        </li>
+        <li>
+          Change orders fork a new revision instead of editing signed work.
+        </li>
+        <li>
+          A formula-driven quantity engine turns roof area, squares, ridge, hip
+          and eave lengths, facets, and waste factor into priced line items.
+        </li>
+        <li>
+          Vendor catalogs and DocuSeal e-signature are integrated; vendor-
+          specific materials stay separate from generic catalog items.
+        </li>
+      </ul>
+
+      <h2>result</h2>
+      <p>
+        Shipped as the quoting core of the new CRM: 108 backend modules, 91 UI
+        components, and 54 tests. Reusable templates are designed to cut setup
+        by 15–30 minutes per job.
+      </p>
+
+      <h2>screens</h2>
+      <div class="gallery">
+        <figure>
+          <img
+            src="../assets/projects/estimate-v6-tool.png"
+            alt="Estimate tool for creating a new estimate"
+            width="1320"
+            height="910"
+            loading="lazy"
+          />
+          <figcaption>Creating a new estimate</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="../assets/projects/estimate-v6-presentation-intro.png"
+            alt="Customer-facing estimate summary with property and roof details"
+            width="1261"
+            height="907"
+            loading="lazy"
+          />
+          <figcaption>Homeowner-facing summary</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="../assets/projects/estimate-v6-presentation-quote.png"
+            alt="Presentation view of the quote"
+            width="1385"
+            height="901"
+            loading="lazy"
+          />
+          <figcaption>Presentation quote</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="../assets/projects/estimate-v6-line-items.png"
+            alt="Roof scope with quantity, unit price, and grand total"
+            width="596"
+            height="843"
+            loading="lazy"
+          />
+          <figcaption>Scope and pricing</figcaption>
+        </figure>
+      </div>
+
+      <p><a href="https://roofing.io">roofing.io ↗</a></p>
+
+      <p class="pager">
+        <a href="maxai.html">← MaxAI</a>
+        <a href="geospatial-measurement.html">next: Geospatial measurement →</a>
+      </p>
+      <footer><p>Static HTML and CSS.</p></footer>
+    </div>
+  </body>
+</html>

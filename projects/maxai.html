@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MaxAI — Supriya Dutta</title>
+    <meta
+      name="description"
+      content="Case study: a Claude-powered CRM assistant with tool calling across 30 actions and structured UI responses."
+    />
+    <meta name="theme-color" content="#0d1117" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="page case">
+      <nav class="nav" aria-label="Site">
+        <a class="home" href="../">supriya dutta</a>
+        <a href="../#projects">projects</a>
+        <a href="../#contact">contact</a>
+      </nav>
+
+      <p class="crumb"><a href="../#projects">← projects</a></p>
+      <h1>MaxAI</h1>
+      <p class="headline">
+        A conversational assistant inside the roofing.io CRM that turns a plain
+        request into the right backend action.
+      </p>
+
+      <dl class="facts">
+        <div><dt>role</dt><dd>Co-developer</dd></div>
+        <div><dt>company</dt><dd>Granular.ai</dd></div>
+        <div>
+          <dt>stack</dt>
+          <dd>Claude API, TypeScript, tRPC, React</dd>
+        </div>
+        <div>
+          <dt>link</dt>
+          <dd><a href="https://roofing.io/agent">roofing.io/agent ↗</a></dd>
+        </div>
+      </dl>
+
+      <figure class="narrow">
+        <img
+          src="../assets/projects/max.ai.png"
+          alt="MaxAI chat: a request to collect a final check, followed by three completed steps"
+          width="732"
+          height="891"
+        />
+        <figcaption>
+          A request becomes a short list of completed steps.
+        </figcaption>
+      </figure>
+
+      <h2>problem</h2>
+      <p>
+        Contractors move between jobs, contacts, invoices, reports, and
+        estimates. Each lives in a different screen or vendor tool, so a simple
+        question like “collect the final check on this job” takes many clicks.
+      </p>
+
+      <h2>approach</h2>
+      <ul>
+        <li>
+          Claude routes each request to one of 30 registered tools (jobs,
+          contacts, KPI analytics, report ordering, estimate comparison).
+        </li>
+        <li>
+          Tools run through internal tRPC callers, the same typed backend the
+          product already uses, so the assistant gets no separate code path or
+          permissions model.
+        </li>
+        <li>
+          Replies come back as structured output that the UI renders as cards,
+          not a wall of text.
+        </li>
+      </ul>
+
+      <h2>result</h2>
+      <p>
+        Shipped as the assistant in the new CRM. The 30-tool registry is the
+        concrete deliverable; I have not measured tool-selection accuracy yet,
+        so I do not quote a number.
+      </p>
+
+      <p class="pager">
+        <span></span>
+        <a href="estimate-v6.html">next: Estimate V6 →</a>
+      </p>
+      <footer><p>Static HTML and CSS.</p></footer>
+    </div>
+  </body>
+</html>
